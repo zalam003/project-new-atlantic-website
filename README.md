@@ -31,9 +31,20 @@ npm run dev
 - **[Project Overview](docs/README.md)** - Comprehensive project documentation
 - **[Setup Guide](docs/SETUP.md)** - Installation and development instructions  
 - **[Project Status](docs/PROJECT_STATUS.md)** - Current progress and business impact
+- **[Design System](docs/DESIGN_SYSTEM.md)** - Complete design system documentation
+- **[Design Quick Reference](docs/DESIGN_QUICK_REFERENCE.md)** - Quick design reference guide
+- **[Vercel Deployment](docs/VERCEL_DEPLOYMENT.md)** - Deployment guide and optimization
 - **[Claude Project Guide](docs/HOW_TO_SETUP_CLAUDE_PROJECT.md)** - How to setup Claude Projects for continuity
 - **[Image Collection Guide](docs/IMAGE_COLLECTION_GUIDE.md)** - Process for collecting and optimizing images
 - **[Image Collection Checklist](docs/IMAGE_COLLECTION_CHECKLIST.md)** - Tracking progress of image collection
+
+### Design System Highlights
+🎨 **Industry-Specific Design:** Textile-inspired patterns and garment manufacturing aesthetics  
+🌈 **Professional Color Scheme:** Trust-building blues with sophisticated gradients  
+📱 **Mobile-First:** Optimized for global B2B client device usage  
+🏭 **B2B Focused:** Color psychology and layout designed for business decision-makers  
+
+👨‍💻 **For Developers:** All design tokens, CSS classes, and implementation patterns are documented in the design system guide.
 
 ### Templates
 - **[Project Templates](templates/)** - Reusable templates for future projects
