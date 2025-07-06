@@ -28,4 +28,35 @@
   .container-custom {
     @apply max-w-7xl mx-auto;
   }
+
+  /* Text overlay styles for image components */
+  .text-overlay-primary {
+    color: white;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .text-overlay-secondary {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Image gradient overlays */
+  .image-overlay-gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+  }
+
+  /* Footer contact item styles */
+  .footer-contact-item {
+    @apply flex items-center space-x-2 text-xs text-gray-400 hover:text-gray-300 transition-colors duration-200;
+  }
+
+  .footer-contact-icon {
+    @apply h-4 w-4 flex-shrink-0;
+  }
+
+  /* Service card overlay styles */
+  .service-overlay-gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  }
 }

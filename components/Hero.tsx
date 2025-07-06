@@ -140,11 +140,11 @@ export default function Hero() {
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent rounded-lg"></div>
+                <div className="absolute inset-0 image-overlay-gradient rounded-lg"></div>
                 <div className="absolute bottom-3 left-3 right-3">
                   <div className="text-center">
-                    <span className="text-white font-semibold text-sm block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>Precision Cutting</span>
-                    <span className="text-white/90 text-xs drop-shadow-md" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8)'}}>Advanced Technology</span>
+                    <span className="text-overlay-primary text-sm block drop-shadow-lg">Precision Cutting</span>
+                    <span className="text-overlay-secondary text-xs drop-shadow-md">Advanced Technology</span>
                   </div>
                 </div>
               </div>
@@ -158,11 +158,11 @@ export default function Hero() {
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent rounded-lg"></div>
+                <div className="absolute inset-0 image-overlay-gradient rounded-lg"></div>
                 <div className="absolute bottom-3 left-3 right-3">
                   <div className="text-center">
-                    <span className="text-white font-semibold text-sm block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>Quality Control</span>
-                    <span className="text-white/90 text-xs drop-shadow-md" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8)'}}>Rigorous Testing</span>
+                    <span className="text-overlay-primary text-sm block drop-shadow-lg">Quality Control</span>
+                    <span className="text-overlay-secondary text-xs drop-shadow-md">Rigorous Testing</span>
                   </div>
                 </div>
               </div>

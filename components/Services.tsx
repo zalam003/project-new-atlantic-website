@@ -75,8 +75,8 @@ export default function Services() {
                   </div>
                   <div className="absolute bottom-3 left-4 right-4">
                     <div className="text-center">
-                      <span className="text-white font-semibold text-sm block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>{service.name}</span>
-                      <span className="text-white/90 text-xs drop-shadow-md" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8)'}}>Professional Solutions</span>
+                      <span className="text-overlay-primary text-sm block drop-shadow-lg">{service.name}</span>
+                      <span className="text-overlay-secondary text-xs drop-shadow-md">Professional Solutions</span>
                     </div>
                   </div>
                 </div>

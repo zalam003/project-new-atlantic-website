@@ -110,7 +110,7 @@ export default function BusinessImpact() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   <div className="absolute bottom-3 left-4 right-4">
                     <div className="text-center">
-                      <span className="text-white font-semibold text-sm block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>{advantage.title}</span>
+                      <span className="text-overlay-primary text-sm block drop-shadow-lg">{advantage.title}</span>
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary-600/90 text-white mt-1 drop-shadow-md">
                         {advantage.impact}
                       </span>
