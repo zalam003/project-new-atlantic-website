@@ -139,16 +139,15 @@ export default function Hero() {
               </div>
               
               {/* Manufacturing process images */}
-              <div className="relative overflow-hidden rounded-xl bg-gray-900/5 p-4">
+              <div className="relative overflow-hidden rounded-xl">
                 <Image
                   src="/images/misc/cutting.jpg"
                   alt="Precision Cutting Process"
                   width={300}
                   height={200}
-                  className="w-full h-32 object-cover rounded-lg"
+                  className="w-full h-40 object-cover"
                 />
-                <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                <div className="absolute inset-0 image-overlay-gradient rounded-lg"></div>
+                <div className="absolute inset-0 image-overlay-gradient"></div>
                 <div className="absolute bottom-3 left-3 right-3">
                   <div className="text-center">
                     <span className="text-overlay-primary text-sm block drop-shadow-lg">Precision Cutting</span>
@@ -157,16 +156,15 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-xl bg-gray-900/5 p-4">
+              <div className="relative overflow-hidden rounded-xl">
                 <Image
                   src="/images/misc/moisture_control_room.jpg"
                   alt="Quality Control Room"
                   width={300}
                   height={200}
-                  className="w-full h-32 object-cover rounded-lg"
+                  className="w-full h-40 object-cover"
                 />
-                <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                <div className="absolute inset-0 image-overlay-gradient rounded-lg"></div>
+                <div className="absolute inset-0 image-overlay-gradient"></div>
                 <div className="absolute bottom-3 left-3 right-3">
                   <div className="text-center">
                     <span className="text-overlay-primary text-sm block drop-shadow-lg">Quality Control</span>
