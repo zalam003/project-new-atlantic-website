@@ -99,26 +99,19 @@ export default function BusinessImpact() {
           </h3>
           <div className="grid max-w-2xl grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-2">
             {advantages.map((advantage, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-44">
-                  <Image
-                    src={advantage.image}
-                    alt={advantage.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white text-lg font-bold drop-shadow-lg mb-1">
-                      {advantage.title}
-                    </h3>
-                    <p className="text-white/90 text-sm drop-shadow-md">
-                      {advantage.impact}
-                    </p>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <p className="text-gray-600 text-sm">
+              <div key={index} className="relative h-64 rounded-2xl overflow-hidden">
+                <Image
+                  src={advantage.image}
+                  alt={advantage.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-white text-xl font-bold drop-shadow-lg mb-2">
+                    {advantage.title}
+                  </h3>
+                  <p className="text-white/90 text-sm drop-shadow-md">
                     {advantage.description}
                   </p>
                 </div>
