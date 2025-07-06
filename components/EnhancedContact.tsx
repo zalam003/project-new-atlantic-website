@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface FormData {
   name: string
@@ -30,6 +30,20 @@ export default function EnhancedContact() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Pre-populate project type based on URL parameter
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search)
+      const projectType = urlParams.get('type')
+      if (projectType) {
+        setFormData(prev => ({
+          ...prev,
+          projectType: projectType
+        }))
+      }
+    }
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

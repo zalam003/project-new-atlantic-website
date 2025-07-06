@@ -109,7 +109,7 @@ export default function Services() {
                   {/* CTA */}
                   <div className="mt-4">
                     <a 
-                      href="#contact" 
+                      href={`#contact?type=${service.name.toLowerCase().replaceAll(' ', '-')}`}
                       className="inline-flex items-center text-xs font-semibold text-primary-600 hover:text-primary-500 transition-colors duration-200"
                     >
                       Get Quote for {service.name}
