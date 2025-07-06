@@ -3,6 +3,7 @@ import Image from 'next/image'
 const services = [
   {
     name: 'Casual Wear',
+    subtitle: 'Everyday Essentials',
     description: 'Complete sourcing solutions for everyday clothing including t-shirts, jeans, shirts, and casual dresses with modern styling and competitive pricing.',
     features: ['Quality fabric selection', 'Modern styling', 'Competitive pricing', 'Fast turnaround'],
     image: '/images/misc/CoverImage01-600x600.jpg',
@@ -11,6 +12,7 @@ const services = [
   },
   {
     name: 'Active Wear',
+    subtitle: 'Performance Focused',
     description: 'Performance clothing for sports and fitness including activewear, athleisure, and workout gear with moisture-wicking fabrics.',
     features: ['Moisture-wicking fabrics', 'Flexible designs', 'Durability testing', 'Size optimization'],
     image: '/images/misc/CoverImage02-600x600.jpg',
@@ -19,6 +21,7 @@ const services = [
   },
   {
     name: 'Outerwear',
+    subtitle: 'Weather Protection',
     description: 'Protective and fashionable outer garments including jackets, coats, and weather-resistant clothing for all seasons.',
     features: ['Weather protection', 'Insulation options', 'Style variety', 'Seasonal collections'],
     image: '/images/misc/CoverImage03-600x600.jpg',
@@ -27,6 +30,7 @@ const services = [
   },
   {
     name: 'Workwear',
+    subtitle: 'Safety & Durability',
     description: 'Professional and industrial clothing including uniforms, safety wear, and corporate apparel with safety compliance focus.',
     features: ['Safety compliance', 'Durability focus', 'Professional appearance', 'Custom branding'],
     image: '/images/misc/CoverImage04.jpg',
@@ -76,7 +80,7 @@ export default function Services() {
                   <div className="absolute bottom-3 left-4 right-4">
                     <div className="text-center">
                       <span className="text-overlay-primary text-sm block drop-shadow-lg">{service.name}</span>
-                      <span className="text-overlay-secondary text-xs drop-shadow-md">Professional Solutions</span>
+                      <span className="text-overlay-secondary text-xs drop-shadow-md">{service.subtitle}</span>
                     </div>
                   </div>
                 </div>
