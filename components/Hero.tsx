@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <div className="relative isolate overflow-hidden bg-white">
+    <div className="relative isolate overflow-hidden bg-accent-section textile-pattern">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image

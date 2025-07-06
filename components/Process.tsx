@@ -33,7 +33,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <div id="process" className="py-8 sm:py-10 bg-gray-50">
+    <div id="process" className="py-8 sm:py-10 bg-neutral-section textile-pattern">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">Our Process</h2>

@@ -67,7 +67,7 @@ export default function EnhancedContact() {
   }
 
   return (
-    <div id="contact" className="py-8 sm:py-10 bg-gray-50">
+    <div id="contact" className="py-8 sm:py-10 bg-primary-section textile-pattern-alt">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">Get Your Quote</h2>

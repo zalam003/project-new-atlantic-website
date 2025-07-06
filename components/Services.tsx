@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div id="services" className="py-8 sm:py-10 bg-white">
+    <div id="services" className="py-8 sm:py-10 bg-accent-section textile-pattern">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl lg:text-center">
