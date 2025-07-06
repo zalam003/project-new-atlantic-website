@@ -1,0 +1,34 @@
+Instructions: This is an active [PROJECT TYPE] project for [CLIENT NAME], a [INDUSTRY] company. The [TECHNOLOGY STACK] [PROJECT TYPE] is [STATUS] and located at [FILE PATH/REPOSITORY]. 
+
+Key Focus Areas:
+- [PRIMARY OBJECTIVE 1]
+- [PRIMARY OBJECTIVE 2] 
+- [PRIMARY OBJECTIVE 3]
+
+Business Context:
+[CLIENT NAME] is a [INDUSTRY] company that [BUSINESS DESCRIPTION]. Current challenges include [CHALLENGE 1], [CHALLENGE 2], and [CHALLENGE 3]. This project aims to [PROJECT GOAL] resulting in [EXPECTED OUTCOME].
+
+Always reference the uploaded documentation for technical details and project context. Maintain focus on [BUSINESS GOAL] and [SUCCESS METRIC].
+
+Development Guidelines:
+- [KEY GUIDELINE 1]
+- [KEY GUIDELINE 2]
+- [KEY GUIDELINE 3]
+- [KEY GUIDELINE 4]
+
+Technical Constraints:
+- [CONSTRAINT 1]
+- [CONSTRAINT 2]
+- [CONSTRAINT 3]
+
+Success Metrics:
+- [METRIC 1]: [TARGET VALUE]
+- [METRIC 2]: [TARGET VALUE]
+- [METRIC 3]: [TARGET VALUE]
+
+Important Notes:
+- [CRITICAL NOTE 1]
+- [CRITICAL NOTE 2]
+- [CRITICAL NOTE 3]
+
+When providing recommendations, always consider [CONSIDERATION 1], [CONSIDERATION 2], and the client's [CLIENT CHARACTERISTIC] level of technical knowledge.
