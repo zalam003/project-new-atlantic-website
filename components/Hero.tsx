@@ -21,10 +21,10 @@ export default function Hero() {
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-200 to-primary-400 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 pb-16 pt-8 sm:pb-24 lg:flex lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-8 sm:pb-12 lg:flex lg:px-8 lg:py-12">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-6">
           {/* Badge */}
-          <div className="mt-16 sm:mt-20 lg:mt-8">
+          <div className="mt-8 sm:mt-12 lg:mt-6">
             <div className="inline-flex space-x-6">
               <span className="rounded-full bg-primary-600/10 px-3 py-1 text-sm font-semibold leading-6 text-primary-600 ring-1 ring-inset ring-primary-600/10">
                 Established 2014
@@ -36,7 +36,7 @@ export default function Hero() {
           </div>
 
           {/* Main headline */}
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
             Your Complete
             <span className="text-primary-600 block sm:inline sm:ml-3">
               Garment Sourcing
@@ -45,13 +45,13 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg leading-8 text-gray-600">
             New Atlantic Global provides end-to-end supply chain management from design to delivery. 
             Specializing in casual wear, active wear, outerwear, and workwear with over 10 years of industry expertise.
           </p>
 
           {/* Key benefits */}
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
             <div className="flex items-center space-x-3">
               <div className="flex-shrink-0">
                 <div className="h-6 w-6 bg-green-500 rounded-full flex items-center justify-center">
@@ -95,7 +95,7 @@ export default function Hero() {
           </div>
 
           {/* CTA buttons */}
-          <div className="mt-10 flex items-center gap-x-6">
+          <div className="mt-6 flex items-center gap-x-6">
             <Link
               href="#contact"
               className="rounded-md bg-primary-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-colors duration-200"
@@ -112,7 +112,7 @@ export default function Hero() {
         </div>
 
         {/* Right side - Product showcase */}
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-16">
+        <div className="mx-auto mt-8 flex max-w-2xl sm:mt-12 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-16">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
               {/* Featured product image */}
@@ -169,7 +169,7 @@ export default function Hero() {
             </div>
 
             {/* Trust indicators */}
-            <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+            <div className="mt-6 grid grid-cols-3 gap-4 text-center">
               <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
                 <div className="text-2xl font-bold text-primary-600">10+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>

@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div id="services" className="py-16 sm:py-20 bg-white">
+    <div id="services" className="py-8 sm:py-10 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -45,14 +45,14 @@ export default function Services() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Complete Garment Categories
           </p>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-lg leading-8 text-gray-600">
             We specialize in four main categories of garment manufacturing, each with dedicated expertise 
             and quality standards to meet your specific needs.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
+        <div className="mx-auto mt-8 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-2">
             {services.map((service, index) => (
               <div key={service.name} className={`relative overflow-hidden rounded-2xl ${service.bgColor} p-6 shadow-lg hover:shadow-xl transition-shadow duration-300`}>
@@ -121,8 +121,8 @@ export default function Services() {
         </div>
 
         {/* Additional Services CTA */}
-        <div className="mx-auto mt-16 max-w-2xl text-center">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-600 to-blue-600 p-8 shadow-xl">
+        <div className="mx-auto mt-10 max-w-2xl text-center">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-600 to-blue-600 p-6 shadow-xl">
             <div className="absolute inset-0 opacity-20">
               <Image
                 src="/images/misc/section01-rz.jpg"
@@ -132,16 +132,16 @@ export default function Services() {
               />
             </div>
             <div className="relative">
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-white mb-3">
                 Custom Solutions Available
               </h3>
-              <p className="text-blue-100 mb-6 leading-relaxed">
+              <p className="text-blue-100 mb-4 leading-relaxed">
                 Don't see exactly what you're looking for? We provide custom garment sourcing 
                 solutions tailored to your specific requirements and industry needs.
               </p>
               <a 
                 href="#contact" 
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 transition-colors duration-200 shadow-sm"
+                className="inline-flex items-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 transition-colors duration-200 shadow-sm"
               >
                 Discuss Custom Solutions
               </a>
@@ -150,9 +150,9 @@ export default function Services() {
         </div>
 
         {/* Service Process Overview */}
-        <div className="mx-auto mt-16 max-w-7xl">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="mx-auto mt-10 max-w-7xl">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
               Our Service Process
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">

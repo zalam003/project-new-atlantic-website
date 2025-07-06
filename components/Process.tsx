@@ -33,19 +33,19 @@ const steps = [
 
 export default function Process() {
   return (
-    <div id="process" className="py-16 sm:py-20 bg-gray-50">
+    <div id="process" className="py-8 sm:py-10 bg-gray-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">Our Process</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             From Concept to Delivery
           </p>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-lg leading-8 text-gray-600">
             Our comprehensive approach ensures quality at every step of the manufacturing process.
           </p>
         </div>
         
-        <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-4xl">
+        <div className="mx-auto mt-8 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-4xl">
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
             {steps.map((step, stepIdx) => (
               <div key={step.name} className="relative pl-16">

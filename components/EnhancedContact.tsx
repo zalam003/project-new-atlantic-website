@@ -67,19 +67,19 @@ export default function EnhancedContact() {
   }
 
   return (
-    <div id="contact" className="py-16 sm:py-20 bg-gray-50">
+    <div id="contact" className="py-8 sm:py-10 bg-gray-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">Get Your Quote</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Start Your Project Today
           </p>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-lg leading-8 text-gray-600">
             Tell us about your garment sourcing needs and we'll provide a detailed quote within 24 hours.
           </p>
         </div>
         
-        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-2">
+        <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Value Proposition */}
           <div className="lg:pr-8">
             <h3 className="text-xl font-semibold leading-8 text-gray-900 mb-6">

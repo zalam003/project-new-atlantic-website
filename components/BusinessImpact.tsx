@@ -60,20 +60,20 @@ export default function BusinessImpact() {
   ]
 
   return (
-    <div className="py-16 sm:py-20 bg-gray-50">
+    <div className="py-8 sm:py-10 bg-gray-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">Business Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Measurable Results for Your Business
           </p>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-lg leading-8 text-gray-600">
             See why leading brands choose New Atlantic Global for their sourcing needs
           </p>
         </div>
 
         {/* Key Metrics */}
-        <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
+        <div className="mx-auto mt-8 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-4">
             {metrics.map((metric, index) => (
               <div key={index} className="flex flex-col items-center text-center bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -93,8 +93,8 @@ export default function BusinessImpact() {
         </div>
 
         {/* Competitive Advantages */}
-        <div className="mx-auto mt-16 max-w-7xl">
-          <h3 className="text-2xl font-bold tracking-tight text-gray-900 text-center mb-8">
+        <div className="mx-auto mt-10 max-w-7xl">
+          <h3 className="text-xl font-bold tracking-tight text-gray-900 text-center mb-6">
             Your Competitive Edge
           </h3>
           <div className="grid max-w-2xl grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-2">
@@ -128,7 +128,7 @@ export default function BusinessImpact() {
         </div>
 
         {/* ROI Calculator CTA */}
-        <div className="mx-auto mt-12 max-w-4xl">
+        <div className="mx-auto mt-8 max-w-4xl">
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-600 to-blue-600 p-6 shadow-xl">
             <div className="absolute inset-0 opacity-10">
               <Image
