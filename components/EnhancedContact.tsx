@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface FormData {
   name: string
   email: string
   company: string
   title: string
+  countryCode: string
   phone: string
   projectType: string
   orderVolume: string
@@ -21,6 +22,7 @@ export default function EnhancedContact() {
     email: '',
     company: '',
     title: '',
+    countryCode: '+1',
     phone: '',
     projectType: '',
     orderVolume: '',
@@ -30,9 +32,32 @@ export default function EnhancedContact() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [emailError, setEmailError] = useState('')
+
+  // Pre-populate project type based on URL parameter
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search)
+      const projectType = urlParams.get('type')
+      if (projectType) {
+        setFormData(prev => ({
+          ...prev,
+          projectType: projectType
+        }))
+      }
+    }
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate email before submission
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    if (!emailRegex.test(formData.email)) {
+      setEmailError('Please enter a valid email address with "@" symbol')
+      return
+    }
+    
     setIsSubmitting(true)
     
     // TODO: Implement actual form submission to CRM/email service
@@ -47,6 +72,7 @@ export default function EnhancedContact() {
       email: '',
       company: '',
       title: '',
+      countryCode: '+1',
       phone: '',
       projectType: '',
       orderVolume: '',
@@ -56,30 +82,43 @@ export default function EnhancedContact() {
     })
     
     setIsSubmitting(false)
+    setEmailError('')
     alert('Thank you! We will contact you within 24 hours to discuss your project.')
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     })
+
+    // Real-time email validation
+    if (name === 'email') {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+      if (value && !emailRegex.test(value)) {
+        setEmailError('Please enter a valid email address with "@" symbol')
+      } else {
+        setEmailError('')
+      }
+    }
   }
 
   return (
-    <div id="contact" className="py-24 sm:py-32 bg-gray-50">
+    <div id="contact" className="py-8 sm:py-10 bg-primary-section textile-pattern-alt">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">Get Your Quote</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Start Your Project Today
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-lg leading-8 text-gray-600">
             Tell us about your garment sourcing needs and we'll provide a detailed quote within 24 hours.
           </p>
         </div>
         
-        <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-16 lg:grid-cols-2">
+        <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Value Proposition */}
           <div className="lg:pr-8">
             <h3 className="text-xl font-semibold leading-8 text-gray-900 mb-6">
@@ -175,10 +214,18 @@ export default function EnhancedContact() {
                     name="email"
                     type="email"
                     required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    title="Please enter a valid email address (example: name@company.com)"
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-2 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
+                    placeholder="your.email@company.com"
+                    className={`mt-2 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ${
+                      emailError ? 'ring-red-300 focus:ring-red-600' : 'ring-gray-300 focus:ring-primary-600'
+                    } placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6`}
                   />
+                  {emailError && (
+                    <p className="mt-1 text-sm text-red-600">{emailError}</p>
+                  )}
                 </div>
               </div>
               
@@ -214,17 +261,73 @@ export default function EnhancedContact() {
               </div>
               
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium leading-6 text-gray-900">
+                <label className="block text-sm font-medium leading-6 text-gray-900">
                   Phone Number
                 </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="mt-2 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                />
+                <div className="mt-2 flex">
+                  <select
+                    name="countryCode"
+                    value={formData.countryCode}
+                    onChange={handleChange}
+                    className="rounded-l-md border-0 bg-gray-50 py-2 pl-3 pr-8 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm"
+                  >
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+33">🇫🇷 +33</option>
+                    <option value="+49">🇩🇪 +49</option>
+                    <option value="+39">🇮🇹 +39</option>
+                    <option value="+34">🇪🇸 +34</option>
+                    <option value="+31">🇳🇱 +31</option>
+                    <option value="+32">🇧🇪 +32</option>
+                    <option value="+41">🇨🇭 +41</option>
+                    <option value="+43">🇦🇹 +43</option>
+                    <option value="+45">🇩🇰 +45</option>
+                    <option value="+46">🇸🇪 +46</option>
+                    <option value="+47">🇳🇴 +47</option>
+                    <option value="+358">🇫🇮 +358</option>
+                    <option value="+86">🇨🇳 +86</option>
+                    <option value="+81">🇯🇵 +81</option>
+                    <option value="+82">🇰🇷 +82</option>
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+971">🇦🇪 +971</option>
+                    <option value="+966">🇸🇦 +966</option>
+                    <option value="+852">🇭🇰 +852</option>
+                    <option value="+65">🇸🇬 +65</option>
+                    <option value="+60">🇲🇾 +60</option>
+                    <option value="+66">🇹🇭 +66</option>
+                    <option value="+84">🇻🇳 +84</option>
+                    <option value="+880">🇧🇩 +880</option>
+                    <option value="+92">🇵🇰 +92</option>
+                    <option value="+94">🇱🇰 +94</option>
+                    <option value="+62">🇮🇩 +62</option>
+                    <option value="+63">🇵🇭 +63</option>
+                    <option value="+61">🇦🇺 +61</option>
+                    <option value="+64">🇳🇿 +64</option>
+                    <option value="+55">🇧🇷 +55</option>
+                    <option value="+52">🇲🇽 +52</option>
+                    <option value="+54">🇦🇷 +54</option>
+                    <option value="+56">🇨🇱 +56</option>
+                    <option value="+57">🇨🇴 +57</option>
+                    <option value="+51">🇵🇪 +51</option>
+                    <option value="+27">🇿🇦 +27</option>
+                    <option value="+20">🇪🇬 +20</option>
+                    <option value="+234">🇳🇬 +234</option>
+                    <option value="+254">🇰🇪 +254</option>
+                    <option value="+212">🇲🇦 +212</option>
+                    <option value="+216">🇹🇳 +216</option>
+                    <option value="+213">🇩🇿 +213</option>
+                    <option value="+90">🇹🇷 +90</option>
+                  </select>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Phone number"
+                    className="flex-1 rounded-r-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
               </div>
               
               <div>

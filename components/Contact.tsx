@@ -24,19 +24,19 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className="py-24 sm:py-32">
+    <div id="contact" className="py-8 sm:py-10 bg-primary-section textile-pattern-alt">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">Contact Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Get Started Today
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg leading-8 text-gray-600">
             Ready to discuss your garment sourcing needs? Our team is here to help you bring your vision to life.
           </p>
         </div>
         
-        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-16 lg:grid-cols-2">
+        <div className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Contact Information */}
           <div>
             <h3 className="text-lg font-semibold leading-8 text-gray-900">Contact Information</h3>
