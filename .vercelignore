@@ -1,0 +1,91 @@
+# Vercel-specific ignore file for deployment optimization
+
+# Development scripts and tools
+/scripts/
+/docs/drafts/
+/temp_download/
+
+# Development files
+*.md
+!README.md
+.env.example
+.env.sample
+
+# Development dependencies logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+image_download.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+__tests__/
+*.test.js
+*.test.ts
+*.test.tsx
+*.spec.js
+*.spec.ts
+*.spec.tsx
+/coverage/
+
+# Documentation files (keep essential ones)
+/docs/SETUP.md
+/docs/HOW_TO_SETUP_CLAUDE_PROJECT.md
+
+# Backup and temporary files
+*.bak
+*.backup
+*.old
+*.tmp
+tmp/
+temp/
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Database files
+*.sqlite
+*.db
+
+# Source maps (optional - remove if you want them in production)
+*.map
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD files (if not needed in production)
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Package manager files (Vercel handles these)
+yarn.lock
+package-lock.json
+
+# Development tools config
+.eslintrc.js
+.eslintrc.json
+.prettierrc
+.prettierignore
+.editorconfig
+
+# TypeScript config (keep essential, ignore extras)
+tsconfig.json
+!next.config.js
+!tailwind.config.js
+!postcss.config.js
