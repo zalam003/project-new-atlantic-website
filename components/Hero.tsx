@@ -21,10 +21,10 @@ export default function Hero() {
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-200 to-primary-400 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-32">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+      <div className="mx-auto max-w-7xl px-6 pb-16 pt-8 sm:pb-24 lg:flex lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-6">
           {/* Badge */}
-          <div className="mt-24 sm:mt-32 lg:mt-16">
+          <div className="mt-16 sm:mt-20 lg:mt-8">
             <div className="inline-flex space-x-6">
               <span className="rounded-full bg-primary-600/10 px-3 py-1 text-sm font-semibold leading-6 text-primary-600 ring-1 ring-inset ring-primary-600/10">
                 Established 2014
@@ -140,9 +140,11 @@ export default function Hero() {
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-md px-3 py-1">
-                    <span className="text-sm font-medium text-gray-900">Precision Cutting</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-lg"></div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg border border-white/20">
+                    <span className="text-sm font-semibold text-gray-900 block">Precision Cutting</span>
+                    <span className="text-xs text-gray-600">Advanced Technology</span>
                   </div>
                 </div>
               </div>
@@ -156,9 +158,11 @@ export default function Hero() {
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-md px-3 py-1">
-                    <span className="text-sm font-medium text-gray-900">Quality Control</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-lg"></div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg border border-white/20">
+                    <span className="text-sm font-semibold text-gray-900 block">Quality Control</span>
+                    <span className="text-xs text-gray-600">Rigorous Testing</span>
                   </div>
                 </div>
               </div>

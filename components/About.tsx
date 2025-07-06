@@ -2,20 +2,20 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <div id="about" className="py-24 sm:py-32 bg-gray-50">
+    <div id="about" className="py-16 sm:py-20 bg-gray-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">About New Atlantic Global</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Your Trusted Partner Since 2014
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg leading-8 text-gray-600">
             We believe that garment sourcing is more than just supply - it's about building complete 
             supply chain solutions with significant backward linkages.
           </p>
         </div>
         
-        <div className="mx-auto mt-16 max-w-7xl">
+        <div className="mx-auto mt-12 max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
             {/* Left side - Content */}
             <div className="flex flex-col justify-center">
@@ -126,11 +126,12 @@ export default function About() {
                     height={200}
                     className="w-full h-40 object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   <div className="absolute bottom-3 left-3 right-3">
-                    <span className="text-white text-sm font-medium">
-                      Quality Control
-                    </span>
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-white/20">
+                      <span className="text-white text-sm font-semibold block">Quality Control</span>
+                      <span className="text-white/80 text-xs">Precision Standards</span>
+                    </div>
                   </div>
                 </div>
 
@@ -142,11 +143,12 @@ export default function About() {
                     height={200}
                     className="w-full h-40 object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   <div className="absolute bottom-3 left-3 right-3">
-                    <span className="text-white text-sm font-medium">
-                      Storage & Distribution
-                    </span>
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-white/20">
+                      <span className="text-white text-sm font-semibold block">Storage & Distribution</span>
+                      <span className="text-white/80 text-xs">Global Logistics</span>
+                    </div>
                   </div>
                 </div>
               </div>

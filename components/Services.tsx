@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div id="services" className="py-24 sm:py-32 bg-white">
+    <div id="services" className="py-16 sm:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -45,67 +45,71 @@ export default function Services() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Complete Garment Categories
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg leading-8 text-gray-600">
             We specialize in four main categories of garment manufacturing, each with dedicated expertise 
             and quality standards to meet your specific needs.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-2">
             {services.map((service, index) => (
-              <div key={service.name} className={`relative overflow-hidden rounded-2xl ${service.bgColor} p-8 shadow-lg hover:shadow-xl transition-shadow duration-300`}>
+              <div key={service.name} className={`relative overflow-hidden rounded-2xl ${service.bgColor} p-6 shadow-lg hover:shadow-xl transition-shadow duration-300`}>
                 {/* Service Image */}
-                <div className="relative mb-6 overflow-hidden rounded-xl">
+                <div className="relative mb-4 overflow-hidden rounded-xl">
                   <Image
                     src={service.image}
                     alt={service.name}
                     width={400}
                     height={250}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-44 object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute top-4 left-4">
-                    <div className={`h-12 w-12 flex items-center justify-center rounded-lg ${service.iconColor}`}>
-                      <span className="text-white font-bold text-lg">
+                    <div className={`h-10 w-10 flex items-center justify-center rounded-lg ${service.iconColor} shadow-lg`}>
+                      <span className="text-white font-bold text-base">
                         {service.name.charAt(0)}
                       </span>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-3 left-4 right-4">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg border border-white/20">
+                      <span className="text-gray-900 font-semibold text-sm block">{service.name}</span>
+                      <span className="text-gray-600 text-xs">Professional Solutions</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="relative">
-                  <h3 className="text-xl font-semibold leading-7 text-gray-900 mb-3">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-600 leading-7 mb-6">
+                  <p className="text-gray-600 leading-6 mb-4 text-sm">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">
+                  <div className="space-y-2">
+                    <h4 className="text-xs font-semibold text-gray-900 uppercase tracking-wide">
                       Key Features
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
-                          <div className="h-2 w-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></div>
-                          <span className="text-gray-700 text-sm">{feature}</span>
+                          <div className="h-1.5 w-1.5 bg-primary-500 rounded-full mr-2 flex-shrink-0"></div>
+                          <span className="text-gray-700 text-xs">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   {/* CTA */}
-                  <div className="mt-6">
+                  <div className="mt-4">
                     <a 
                       href="#contact" 
-                      className="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-500 transition-colors duration-200"
+                      className="inline-flex items-center text-xs font-semibold text-primary-600 hover:text-primary-500 transition-colors duration-200"
                     >
                       Get Quote for {service.name}
-                      <svg className="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="ml-1 h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
                     </a>

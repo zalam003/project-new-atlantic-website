@@ -22,7 +22,7 @@ export default function Header() {
             <img 
               src="/images/misc/NewAtlantic-1.png" 
               alt="New Atlantic Global" 
-              className="h-8 w-auto sm:h-10"
+              className="h-12 w-auto sm:h-16 lg:h-20"
             />
           </Link>
         </div>
@@ -62,7 +62,7 @@ export default function Header() {
                 <img 
                   src="/images/misc/NewAtlantic-1.png" 
                   alt="New Atlantic Global" 
-                  className="h-8 w-auto"
+                  className="h-12 w-auto"
                 />
               </Link>
               <button

@@ -60,20 +60,20 @@ export default function BusinessImpact() {
   ]
 
   return (
-    <div className="py-24 sm:py-32 bg-gray-50">
+    <div className="py-16 sm:py-20 bg-gray-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-600">Business Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Measurable Results for Your Business
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg leading-8 text-gray-600">
             See why leading brands choose New Atlantic Global for their sourcing needs
           </p>
         </div>
 
         {/* Key Metrics */}
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-4">
             {metrics.map((metric, index) => (
               <div key={index} className="flex flex-col items-center text-center bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -93,32 +93,32 @@ export default function BusinessImpact() {
         </div>
 
         {/* Competitive Advantages */}
-        <div className="mx-auto mt-24 max-w-7xl">
-          <h3 className="text-2xl font-bold tracking-tight text-gray-900 text-center mb-12">
+        <div className="mx-auto mt-16 max-w-7xl">
+          <h3 className="text-2xl font-bold tracking-tight text-gray-900 text-center mb-8">
             Your Competitive Edge
           </h3>
-          <div className="grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+          <div className="grid max-w-2xl grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-2">
             {advantages.map((advantage, index) => (
               <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-48">
+                <div className="relative h-44">
                   <Image
                     src={advantage.image}
                     alt={advantage.title}
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
-                      {advantage.impact}
-                    </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-3 left-4 right-4">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg border border-white/20">
+                      <span className="text-gray-900 font-semibold text-sm block">{advantage.title}</span>
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800 mt-1">
+                        {advantage.impact}
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                    {advantage.title}
-                  </h4>
-                  <p className="text-gray-600">
+                <div className="p-5">
+                  <p className="text-gray-600 text-sm">
                     {advantage.description}
                   </p>
                 </div>
@@ -128,8 +128,8 @@ export default function BusinessImpact() {
         </div>
 
         {/* ROI Calculator CTA */}
-        <div className="mx-auto mt-16 max-w-4xl">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-600 to-blue-600 p-8 shadow-xl">
+        <div className="mx-auto mt-12 max-w-4xl">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-600 to-blue-600 p-6 shadow-xl">
             <div className="absolute inset-0 opacity-10">
               <Image
                 src="/images/misc/section01-rz.jpg"
@@ -139,23 +139,23 @@ export default function BusinessImpact() {
               />
             </div>
             <div className="relative text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-white mb-3">
                 Calculate Your Potential Savings
               </h3>
-              <p className="text-blue-100 mb-6 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-blue-100 mb-4 leading-relaxed max-w-2xl mx-auto text-sm">
                 See how much you could save by switching to New Atlantic Global for your garment sourcing needs. 
                 Our direct manufacturer relationships and efficient processes deliver measurable cost reductions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a 
                   href="#contact" 
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 transition-colors duration-200 shadow-sm"
+                  className="inline-flex items-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 transition-colors duration-200 shadow-sm"
                 >
                   Get Your Custom ROI Analysis
                 </a>
                 <a 
                   href="/services" 
-                  className="inline-flex items-center px-6 py-3 border border-white/30 text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors duration-200"
+                  className="inline-flex items-center px-5 py-2 border border-white/30 text-sm font-medium rounded-md text-white hover:bg-white/10 transition-colors duration-200"
                 >
                   View Our Services
                 </a>
