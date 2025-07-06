@@ -117,16 +117,24 @@ export default function Hero() {
             <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
               {/* Featured product image */}
               <div className="col-span-2">
-                <div className="relative overflow-hidden rounded-xl bg-gray-900/5 p-4">
+                <div className="relative overflow-hidden rounded-2xl">
                   <Image
                     src="/images/misc/our_collection-1000x1000.jpg"
                     alt="New Atlantic Global Product Collection"
                     width={600}
                     height={400}
-                    className="w-full h-64 object-cover rounded-lg"
+                    className="w-full h-80 object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h4 className="text-xl font-semibold text-white mb-2">
+                      Premium Quality Collection
+                    </h4>
+                    <p className="text-gray-200 text-sm">
+                      Complete garment sourcing solutions for all categories
+                    </p>
+                  </div>
                 </div>
               </div>
               
