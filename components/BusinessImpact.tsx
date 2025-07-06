@@ -108,13 +108,13 @@ export default function BusinessImpact() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-3 left-4 right-4">
-                    <div className="text-center">
-                      <span className="text-overlay-primary text-sm block drop-shadow-lg">{advantage.title}</span>
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary-600/90 text-white mt-1 drop-shadow-md">
-                        {advantage.impact}
-                      </span>
-                    </div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white text-lg font-bold drop-shadow-lg mb-1">
+                      {advantage.title}
+                    </h3>
+                    <p className="text-white/90 text-sm drop-shadow-md">
+                      {advantage.impact}
+                    </p>
                   </div>
                 </div>
                 <div className="p-5">
