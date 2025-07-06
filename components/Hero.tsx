@@ -140,11 +140,11 @@ export default function Hero() {
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-lg"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent rounded-lg"></div>
                 <div className="absolute bottom-3 left-3 right-3">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg border border-white/20">
-                    <span className="text-sm font-semibold text-gray-900 block">Precision Cutting</span>
-                    <span className="text-xs text-gray-600">Advanced Technology</span>
+                  <div className="text-center">
+                    <span className="text-white font-semibold text-sm block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>Precision Cutting</span>
+                    <span className="text-white/90 text-xs drop-shadow-md" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8)'}}>Advanced Technology</span>
                   </div>
                 </div>
               </div>
@@ -158,11 +158,11 @@ export default function Hero() {
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-lg"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent rounded-lg"></div>
                 <div className="absolute bottom-3 left-3 right-3">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg border border-white/20">
-                    <span className="text-sm font-semibold text-gray-900 block">Quality Control</span>
-                    <span className="text-xs text-gray-600">Rigorous Testing</span>
+                  <div className="text-center">
+                    <span className="text-white font-semibold text-sm block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>Quality Control</span>
+                    <span className="text-white/90 text-xs drop-shadow-md" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8)'}}>Rigorous Testing</span>
                   </div>
                 </div>
               </div>

@@ -126,11 +126,11 @@ export default function About() {
                     height={200}
                     className="w-full h-40 object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-3 left-3 right-3">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-white/20">
-                      <span className="text-white text-sm font-semibold block">Quality Control</span>
-                      <span className="text-white/80 text-xs">Precision Standards</span>
+                    <div className="text-center">
+                      <span className="text-white text-sm font-semibold block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>Quality Control</span>
+                      <span className="text-white/90 text-xs drop-shadow-md" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8)'}}>Precision Standards</span>
                     </div>
                   </div>
                 </div>
@@ -143,11 +143,11 @@ export default function About() {
                     height={200}
                     className="w-full h-40 object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-3 left-3 right-3">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-white/20">
-                      <span className="text-white text-sm font-semibold block">Storage & Distribution</span>
-                      <span className="text-white/80 text-xs">Global Logistics</span>
+                    <div className="text-center">
+                      <span className="text-white text-sm font-semibold block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>Storage & Distribution</span>
+                      <span className="text-white/90 text-xs drop-shadow-md" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8)'}}>Global Logistics</span>
                     </div>
                   </div>
                 </div>

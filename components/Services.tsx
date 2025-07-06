@@ -74,9 +74,9 @@ export default function Services() {
                     </div>
                   </div>
                   <div className="absolute bottom-3 left-4 right-4">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg border border-white/20">
-                      <span className="text-gray-900 font-semibold text-sm block">{service.name}</span>
-                      <span className="text-gray-600 text-xs">Professional Solutions</span>
+                    <div className="text-center">
+                      <span className="text-white font-semibold text-sm block drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>{service.name}</span>
+                      <span className="text-white/90 text-xs drop-shadow-md" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.8)'}}>Professional Solutions</span>
                     </div>
                   </div>
                 </div>
