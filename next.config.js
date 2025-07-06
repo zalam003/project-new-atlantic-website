@@ -1,10 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // App Router configuration
-  experimental: {
-    appDir: true,
-  },
-  
   // Image optimization for Vercel
   images: {
     domains: ['newatlantic.biz'],
@@ -45,51 +40,11 @@ const nextConfig = {
     ]
   },
   
-  // Cache control for static assets
-  async rewrites() {
-    return [
-      {
-        source: '/images/:path*',
-        destination: '/images/:path*',
-      },
-    ]
-  },
-  
-  // Bundle analyzer support
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: (config, { isServer }) => {
-      if (!isServer) {
-        const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-        config.plugins.push(
-          new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            openAnalyzer: false,
-            reportFilename: '../analyze/client.html',
-          })
-        )
-      }
-      return config
-    },
-  }),
-  
   // Optimization for production builds
   swcMinify: true,
   
   // Configure trailing slash behavior
   trailingSlash: false,
-  
-  // Custom webpack config for optimizations
-  webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        '@': require('path').resolve(__dirname),
-      }
-    }
-    
-    return config
-  },
   
   // Environment variables for client-side
   env: {
@@ -103,12 +58,8 @@ const nextConfig = {
   async redirects() {
     return [
       // Add any necessary redirects here
-      // Example: old URLs to new URLs
     ]
   },
-  
-  // Output configuration for Vercel
-  output: 'standalone',
   
   // Disable source maps in production for security
   productionBrowserSourceMaps: false,
