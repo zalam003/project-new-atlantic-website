@@ -1,99 +1,191 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
-      {/* Background gradient */}
-      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary-200 to-blue-400 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+    <div className="relative isolate overflow-hidden bg-white">
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/misc/collage-rz.jpg"
+          alt="New Atlantic Global Manufacturing"
+          fill
+          className="object-cover object-center opacity-20"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/95"></div>
       </div>
-      
-      <div className="mx-auto max-w-4xl py-20 sm:py-32 lg:py-48">
-        <div className="text-center">
-          {/* Main headline optimized for mobile */}
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            Reduce Sourcing Costs by
-            <span className="text-primary-600 block sm:inline sm:ml-3">30-50%</span>
-          </h1>
-          
-          {/* Value proposition */}
-          <p className="mt-4 text-base leading-7 text-gray-600 max-w-2xl mx-auto sm:mt-6 sm:text-lg sm:leading-8">
-            Complete garment sourcing and manufacturing solutions. From design to delivery, 
-            we handle everything so you can focus on growing your business.
-          </p>
-          
-          {/* Key benefits - mobile optimized */}
-          <div className="mt-8 grid grid-cols-1 gap-4 text-sm sm:grid-cols-3 sm:gap-6 sm:text-base max-w-3xl mx-auto">
-            <div className="flex items-center justify-center sm:justify-start">
-              <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <span className="text-gray-700 font-medium">10+ Years Experience</span>
+
+      {/* Decorative background elements */}
+      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-200 to-primary-400 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+          {/* Badge */}
+          <div className="mt-24 sm:mt-32 lg:mt-16">
+            <div className="inline-flex space-x-6">
+              <span className="rounded-full bg-primary-600/10 px-3 py-1 text-sm font-semibold leading-6 text-primary-600 ring-1 ring-inset ring-primary-600/10">
+                Established 2014
+              </span>
+              <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
+                <span>Complete sourcing solutions</span>
+              </span>
             </div>
-            <div className="flex items-center justify-center sm:justify-start">
-              <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
+          </div>
+
+          {/* Main headline */}
+          <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Your Complete
+            <span className="text-primary-600 block sm:inline sm:ml-3">
+              Garment Sourcing
+            </span>
+            Partner
+          </h1>
+
+          {/* Subtitle */}
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            New Atlantic Global provides end-to-end supply chain management from design to delivery. 
+            Specializing in casual wear, active wear, outerwear, and workwear with over 10 years of industry expertise.
+          </p>
+
+          {/* Key benefits */}
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+            <div className="flex items-center space-x-3">
+              <div className="flex-shrink-0">
+                <div className="h-6 w-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
               </div>
               <span className="text-gray-700 font-medium">Quality Guaranteed</span>
             </div>
-            <div className="flex items-center justify-center sm:justify-start">
-              <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
+            <div className="flex items-center space-x-3">
+              <div className="flex-shrink-0">
+                <div className="h-6 w-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
               </div>
-              <span className="text-gray-700 font-medium">24h Response</span>
+              <span className="text-gray-700 font-medium">Social Compliance</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="flex-shrink-0">
+                <div className="h-6 w-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <span className="text-gray-700 font-medium">Timely Delivery</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="flex-shrink-0">
+                <div className="h-6 w-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <span className="text-gray-700 font-medium">Competitive Pricing</span>
             </div>
           </div>
-          
-          {/* CTA buttons - mobile optimized */}
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center sm:gap-x-6 sm:mt-10">
-            <Link 
-              href="#contact" 
-              className="btn-primary text-center py-4 px-8 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
+
+          {/* CTA buttons */}
+          <div className="mt-10 flex items-center gap-x-6">
+            <Link
+              href="#contact"
+              className="rounded-md bg-primary-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-colors duration-200"
             >
-              Get Free Quote
+              Get Quote
             </Link>
-            <Link 
-              href="/process" 
-              className="btn-secondary text-center py-4 px-8 text-lg font-semibold rounded-xl transition-all duration-200"
+            <Link
+              href="#about"
+              className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors duration-200"
             >
-              How It Works
+              Learn more <span aria-hidden="true">→</span>
             </Link>
           </div>
-          
-          {/* Social proof - mobile friendly */}
-          <div className="mt-8 pt-8 border-t border-gray-200 sm:mt-12">
-            <p className="text-sm text-gray-500 mb-4">Trusted by fashion brands worldwide</p>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 max-w-2xl mx-auto">
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
+        </div>
+
+        {/* Right side - Product showcase */}
+        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-16">
+          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+              {/* Featured product image */}
+              <div className="col-span-2">
+                <div className="relative overflow-hidden rounded-xl bg-gray-900/5 p-4">
+                  <Image
+                    src="/images/misc/our_collection-1000x1000.jpg"
+                    alt="New Atlantic Global Product Collection"
+                    width={600}
+                    height={400}
+                    className="w-full h-64 object-cover rounded-lg"
+                    priority
+                  />
+                  <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                </div>
+              </div>
+              
+              {/* Manufacturing process images */}
+              <div className="relative overflow-hidden rounded-xl bg-gray-900/5 p-4">
+                <Image
+                  src="/images/misc/cutting.jpg"
+                  alt="Precision Cutting Process"
+                  width={300}
+                  height={200}
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-md px-3 py-1">
+                    <span className="text-sm font-medium text-gray-900">Precision Cutting</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-xl bg-gray-900/5 p-4">
+                <Image
+                  src="/images/misc/moisture_control_room.jpg"
+                  alt="Quality Control Room"
+                  width={300}
+                  height={200}
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-md px-3 py-1">
+                    <span className="text-sm font-medium text-gray-900">Quality Control</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
                 <div className="text-2xl font-bold text-primary-600">10+</div>
-                <div className="text-xs text-gray-600">Years Experience</div>
+                <div className="text-sm text-gray-600">Years Experience</div>
               </div>
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
                 <div className="text-2xl font-bold text-primary-600">100+</div>
-                <div className="text-xs text-gray-600">Successful Projects</div>
+                <div className="text-sm text-gray-600">Successful Projects</div>
               </div>
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-primary-600">50+</div>
-                <div className="text-xs text-gray-600">Happy Clients</div>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4 text-center">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm">
                 <div className="text-2xl font-bold text-primary-600">24h</div>
-                <div className="text-xs text-gray-600">Response Time</div>
+                <div className="text-sm text-gray-600">Response Time</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Bottom gradient */}
+
+      {/* Bottom decorative element */}
       <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-        <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-blue-200 to-primary-400 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
+        <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-blue-200 to-primary-400 opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
       </div>
     </div>
   )
