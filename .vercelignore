@@ -84,8 +84,8 @@ package-lock.json
 .prettierignore
 .editorconfig
 
-# TypeScript config (keep essential, ignore extras)
-tsconfig.json
+# Keep essential config files for build
+!tsconfig.json
 !next.config.js
 !tailwind.config.js
 !postcss.config.js
