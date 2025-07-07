@@ -46,16 +46,16 @@ export default function EnhancedContact() {
         
         // First try regular URL search params
         const urlParams = new URLSearchParams(window.location.search)
-        projectType = urlParams.get('type')
+        projectType = urlParams.get('projectType')
         console.log('Project type from search params:', projectType)
         
-        // If not found, try hash-based params (e.g., #contact?type=casual-wear)
+        // If not found, try hash-based params (e.g., #contact?projectType=casual-wear)
         if (!projectType && window.location.hash) {
           const hashParts = window.location.hash.split('?')
           console.log('Hash parts:', hashParts)
           if (hashParts.length > 1) {
             const hashParams = new URLSearchParams(hashParts[1])
-            projectType = hashParams.get('type')
+            projectType = hashParams.get('projectType')
             console.log('Project type from hash params:', projectType)
           }
         }
