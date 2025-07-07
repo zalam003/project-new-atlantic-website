@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import SEOTracker from '../components/SEOTracker'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -163,12 +164,30 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/images/misc/NewAtlantic-1.png" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGQSY5C95L"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-JGQSY5C95L', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `,
+          }}
+        />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className={inter.className}>
+        <SEOTracker />
         <Header />
         <main>{children}</main>
         <Footer />

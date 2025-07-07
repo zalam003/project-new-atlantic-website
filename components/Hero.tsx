@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { trackCTAClick } from '../lib/gtag'
 
 export default function Hero() {
   return (
@@ -98,12 +99,14 @@ export default function Hero() {
           <div className="mt-6 flex items-center gap-x-6">
             <Link
               href="#contact"
+              onClick={() => trackCTAClick('Get Quote', 'hero_section')}
               className="rounded-md bg-primary-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-colors duration-200"
             >
               Get Quote
             </Link>
             <Link
               href="#about"
+              onClick={() => trackCTAClick('Learn more', 'hero_section')}
               className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors duration-200"
             >
               Learn more <span aria-hidden="true">→</span>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { trackServiceCardClick } from '../lib/gtag'
 
 const services = [
   {
@@ -110,6 +111,7 @@ export default function Services() {
                   <div className="mt-4">
                     <a 
                       href={`#contact?projectType=${service.name.toLowerCase().replace(/ /g, '-')}`}
+                      onClick={() => trackServiceCardClick(service.name)}
                       className="inline-flex items-center text-xs font-semibold text-primary-600 hover:text-primary-500 transition-colors duration-200"
                     >
                       Get Quote for {service.name}
