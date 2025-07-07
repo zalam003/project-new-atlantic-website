@@ -112,7 +112,7 @@ export default function Services() {
                   {/* CTA */}
                   <div className="mt-4">
                     <a 
-                      href={`#contact?projectType=${service.name.toLowerCase().replace(/ /g, '-')}`}
+                      href={`/#contact?projectType=${service.name.toLowerCase().replace(/ /g, '-')}`}
                       onClick={() => trackServiceCardClick(service.name)}
                       className="inline-flex items-center text-xs font-semibold text-primary-600 hover:text-primary-500 transition-colors duration-200"
                     >
