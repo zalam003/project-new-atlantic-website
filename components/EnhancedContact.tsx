@@ -36,15 +36,56 @@ export default function EnhancedContact() {
 
   // Pre-populate project type based on URL parameter
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const urlParams = new URLSearchParams(window.location.search)
-      const projectType = urlParams.get('type')
-      if (projectType) {
-        setFormData(prev => ({
-          ...prev,
-          projectType: projectType
-        }))
+    const checkForProjectType = () => {
+      if (typeof window !== 'undefined') {
+        console.log('Current URL:', window.location.href)
+        console.log('Current hash:', window.location.hash)
+        
+        // Check both regular URL params and hash-based params
+        let projectType = null
+        
+        // First try regular URL search params
+        const urlParams = new URLSearchParams(window.location.search)
+        projectType = urlParams.get('type')
+        console.log('Project type from search params:', projectType)
+        
+        // If not found, try hash-based params (e.g., #contact?type=casual-wear)
+        if (!projectType && window.location.hash) {
+          const hashParts = window.location.hash.split('?')
+          console.log('Hash parts:', hashParts)
+          if (hashParts.length > 1) {
+            const hashParams = new URLSearchParams(hashParts[1])
+            projectType = hashParams.get('type')
+            console.log('Project type from hash params:', projectType)
+          }
+        }
+        
+        if (projectType) {
+          console.log('Setting project type from URL:', projectType)
+          setFormData(prev => ({
+            ...prev,
+            projectType: projectType
+          }))
+        }
       }
+    }
+
+    // Check on initial load with a small delay to ensure component is mounted
+    const timer = setTimeout(() => {
+      checkForProjectType()
+    }, 100)
+
+    // Listen for hash changes (when user clicks different service cards)
+    const handleHashChange = () => {
+      checkForProjectType()
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+
+    // Cleanup
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('hashchange', handleHashChange)
     }
   }, [])
 
