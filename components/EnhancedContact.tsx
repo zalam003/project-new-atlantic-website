@@ -66,6 +66,17 @@ export default function EnhancedContact() {
             ...prev,
             projectType: projectType
           }))
+          
+          // Scroll to contact section after setting the project type
+          setTimeout(() => {
+            const contactElement = document.getElementById('contact')
+            if (contactElement) {
+              contactElement.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              })
+            }
+          }, 200)
         }
       }
     }
