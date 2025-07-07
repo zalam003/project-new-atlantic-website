@@ -61,3 +61,66 @@
 2025-07-06T17:30:17.626Z [GREEN] Organized: products/product-11.MSK-01-W-AB-copy.png
 2025-07-06T17:30:17.627Z [GREEN] Organized 21 images
 2025-07-06T17:30:17.627Z [BLUE] Generating image inventory...
+2025-07-07T13:38:13.410Z [BLUE] Checking environment...
+2025-07-07T13:38:13.412Z [GREEN] Environment check passed
+2025-07-07T13:38:13.413Z [BLUE] Setting up directory structure...
+2025-07-07T13:38:13.425Z [GREEN] Directories created
+2025-07-07T13:38:13.426Z [BLUE] Downloading website content and extracting images...
+2025-07-07T13:38:13.426Z [BLUE] Fetching: https://newatlantic.biz/
+2025-07-07T13:38:14.284Z [BLUE] Found 17 images on home page
+2025-07-07T13:38:14.284Z [BLUE] Fetching: https://newatlantic.biz/about-us/
+2025-07-07T13:38:14.992Z [BLUE] Found 4 images on about-us/
+2025-07-07T13:38:14.992Z [BLUE] Fetching: https://newatlantic.biz/category/fashion/
+2025-07-07T13:38:15.590Z [BLUE] Found 2 images on category/fashion/
+2025-07-07T13:38:15.590Z [BLUE] Fetching: https://newatlantic.biz/contact-us/
+2025-07-07T13:38:16.138Z [BLUE] Found 2 images on contact-us/
+2025-07-07T13:38:16.138Z [BLUE] Fetching: https://newatlantic.biz/avant_products/msk-01-w-ab/
+2025-07-07T13:38:16.635Z [BLUE] Found 2 images on avant_products/msk-01-w-ab/
+2025-07-07T13:38:19.474Z [BLUE] Total unique images found: 22
+2025-07-07T13:38:19.561Z [GREEN] Downloaded: NewAtlantic-1.png
+2025-07-07T13:38:19.755Z [GREEN] Downloaded: CoverImage03.jpg
+2025-07-07T13:38:19.767Z [GREEN] Downloaded: CoverImage05.jpg
+2025-07-07T13:38:19.788Z [GREEN] Downloaded: CoverImage04.jpg
+2025-07-07T13:38:19.850Z [GREEN] Downloaded: CoverImage02.jpg
+2025-07-07T13:38:19.966Z [GREEN] Downloaded: CoverImage01-600x600.jpg
+2025-07-07T13:38:20.009Z [GREEN] Downloaded: CoverImage02-600x600.jpg
+2025-07-07T13:38:20.013Z [GREEN] Downloaded: h10-slide-3-background-600x600.jpg
+2025-07-07T13:38:20.059Z [GREEN] Downloaded: cutting.jpg
+2025-07-07T13:38:20.094Z [GREEN] Downloaded: our_collection-1000x1000.jpg
+2025-07-07T13:38:20.238Z [GREEN] Downloaded: moisture_control_room.jpg
+2025-07-07T13:38:20.243Z [GREEN] Downloaded: CoverImage03-600x600.jpg
+2025-07-07T13:38:20.309Z [GREEN] Downloaded: IMG_5247-2.jpg
+2025-07-07T13:38:20.319Z [GREEN] Downloaded: store.jpg
+2025-07-07T13:38:20.391Z [GREEN] Downloaded: Portfolio-01.jpg
+2025-07-07T13:38:20.500Z [GREEN] Downloaded: Key_strength.jpg
+2025-07-07T13:38:20.746Z [YELLOW] Failed to download https://audrey.elated-themes.com/wp-content/uploads/2017/06/h1-background-1.jpg?id=14509: HTTP 301: Moved Permanently
+2025-07-07T13:38:20.777Z [GREEN] Downloaded: section01-rz.jpg
+2025-07-07T13:38:20.782Z [GREEN] Downloaded: collage-rz.jpg
+2025-07-07T13:38:20.791Z [GREEN] Downloaded: title_image_1.png
+2025-07-07T13:38:20.855Z [GREEN] Downloaded: 11.MSK-01-W-AB-copy.png
+2025-07-07T13:38:21.214Z [GREEN] Downloaded 21 images
+2025-07-07T13:38:21.214Z [GREEN] Downloaded: title_image_1.png
+2025-07-07T13:38:21.214Z [BLUE] Organizing images into categories...
+2025-07-07T13:38:21.275Z [GREEN] Organized: misc/NewAtlantic-1-1.png
+2025-07-07T13:38:21.305Z [GREEN] Organized: misc/CoverImage03-1.jpg
+2025-07-07T13:38:21.333Z [GREEN] Organized: misc/CoverImage05-1.jpg
+2025-07-07T13:38:21.363Z [GREEN] Organized: misc/CoverImage02-1.jpg
+2025-07-07T13:38:21.397Z [GREEN] Organized: misc/CoverImage04-1.jpg
+2025-07-07T13:38:21.425Z [GREEN] Organized: misc/cutting-1.jpg
+2025-07-07T13:38:21.451Z [GREEN] Organized: misc/CoverImage01-600x600-1.jpg
+2025-07-07T13:38:21.481Z [GREEN] Organized: hero/hero-h10-slide-3-background-600x600-1.jpg
+2025-07-07T13:38:21.509Z [GREEN] Organized: misc/our_collection-1000x1000-1.jpg
+2025-07-07T13:38:21.539Z [GREEN] Organized: misc/CoverImage02-600x600-1.jpg
+2025-07-07T13:38:21.568Z [GREEN] Organized: misc/moisture_control_room-1.jpg
+2025-07-07T13:38:21.599Z [GREEN] Organized: misc/CoverImage03-600x600-1.jpg
+2025-07-07T13:38:21.626Z [GREEN] Organized: misc/IMG_5247-2-1.jpg
+2025-07-07T13:38:21.657Z [GREEN] Organized: misc/store-1.jpg
+2025-07-07T13:38:21.687Z [GREEN] Organized: misc/Portfolio-01-1.jpg
+2025-07-07T13:38:21.712Z [GREEN] Organized: misc/Key_strength-1.jpg
+2025-07-07T13:38:21.748Z [GREEN] Organized: misc/title_image_1-1.png
+2025-07-07T13:38:21.778Z [GREEN] Organized: misc/collage-rz-1.jpg
+2025-07-07T13:38:21.808Z [GREEN] Organized: misc/section01-rz-1.jpg
+2025-07-07T13:38:21.842Z [GREEN] Organized: products/product-title_image_1-1.png
+2025-07-07T13:38:21.870Z [GREEN] Organized: products/product-11.MSK-01-W-AB-copy-1.png
+2025-07-07T13:38:21.870Z [GREEN] Organized 21 images
+2025-07-07T13:38:21.871Z [BLUE] Generating image inventory...

@@ -1,44 +1,49 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { trackServiceCardClick } from '../lib/gtag'
 
 const services = [
   {
-    name: 'Casual Wear',
-    subtitle: 'Everyday Essentials',
-    description: 'Complete sourcing solutions for everyday clothing including t-shirts, jeans, shirts, and casual dresses with modern styling and competitive pricing.',
-    features: ['Quality fabric selection', 'Modern styling', 'Competitive pricing', 'Fast turnaround'],
-    image: '/images/misc/CoverImage01-600x600.jpg',
+    name: 'Culinary & Food Service',
+    subtitle: 'Chef Coats & Kitchen Uniforms',
+    description: 'Professional chef coats, kitchen uniforms, and food service apparel with compliance standards. Custom features, stain resistance, and health department approval.',
+    features: ['Health dept. compliance', 'Custom pocket designs', 'Stain-resistant fabrics', 'Bulk program management'],
+    image: '/images/products/product-11.MSK-01-W-AB-copy-1.png',
     bgColor: 'bg-blue-50',
-    iconColor: 'bg-blue-600'
+    iconColor: 'bg-blue-600',
+    link: '/services/culinary'
   },
   {
-    name: 'Active Wear',
-    subtitle: 'Performance Focused',
-    description: 'Performance clothing for sports and fitness including activewear, athleisure, and workout gear with moisture-wicking fabrics.',
-    features: ['Moisture-wicking fabrics', 'Flexible designs', 'Durability testing', 'Size optimization'],
-    image: '/images/misc/CoverImage02-600x600.jpg',
+    name: 'Healthcare & Medical',
+    subtitle: 'Scrubs & Lab Coats',
+    description: 'Medical scrubs, lab coats, and healthcare uniforms designed for comfort, functionality, and infection control standards.',
+    features: ['Infection control standards', 'Comfortable fits', 'Easy-care fabrics', 'Professional appearance'],
+    image: '/images/misc/CoverImage01-600x600-1.jpg',
     bgColor: 'bg-green-50',
-    iconColor: 'bg-green-600'
+    iconColor: 'bg-green-600',
+    link: '/services/healthcare'
   },
   {
-    name: 'Outerwear',
-    subtitle: 'Weather Protection',
-    description: 'Protective and fashionable outer garments including jackets, coats, and weather-resistant clothing for all seasons.',
-    features: ['Weather protection', 'Insulation options', 'Style variety', 'Seasonal collections'],
-    image: '/images/misc/CoverImage03-600x600.jpg',
-    bgColor: 'bg-purple-50',
-    iconColor: 'bg-purple-600'
-  },
-  {
-    name: 'Workwear',
-    subtitle: 'Safety & Durability',
-    description: 'Professional and industrial clothing including uniforms, safety wear, and corporate apparel with safety compliance focus.',
-    features: ['Safety compliance', 'Durability focus', 'Professional appearance', 'Custom branding'],
-    image: '/images/misc/CoverImage04.jpg',
+    name: 'Industrial & Safety',
+    subtitle: 'Fire Resistant & Safety Wear',
+    description: 'Fire resistant clothing, safety workwear, and industrial uniforms meeting OSHA and industry safety requirements.',
+    features: ['OSHA compliance', 'Fire resistance', 'High visibility options', 'Durability testing'],
+    image: '/images/misc/CoverImage04-1.jpg',
     bgColor: 'bg-orange-50',
-    iconColor: 'bg-orange-600'
+    iconColor: 'bg-orange-600',
+    link: '/services/industrial'
+  },
+  {
+    name: 'Corporate & Retail',
+    subtitle: 'Professional & Casual Apparel',
+    description: 'Corporate uniforms, retail apparel, and branded clothing for businesses seeking professional appearance and brand consistency.',
+    features: ['Brand customization', 'Professional styling', 'Consistent quality', 'Volume pricing'],
+    image: '/images/misc/CoverImage02-600x600-1.jpg',
+    bgColor: 'bg-purple-50',
+    iconColor: 'bg-purple-600',
+    link: '/services/corporate'
   }
 ]
 
@@ -48,13 +53,13 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary-600">Our Services</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary-600">Our Products</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Complete Garment Categories
+            Four Product Categories
           </p>
           <p className="mt-3 text-lg leading-8 text-gray-600">
-            We specialize in four main categories of garment manufacturing, each with dedicated expertise 
-            and quality standards to meet your specific needs.
+            We manufacture high-quality apparel across four main product categories, each with dedicated expertise 
+            and specialized features to meet your specific market needs.
           </p>
         </div>
 
@@ -111,16 +116,16 @@ export default function Services() {
 
                   {/* CTA */}
                   <div className="mt-4">
-                    <a 
-                      href={`/#contact?projectType=${service.name.toLowerCase().replace(/ /g, '-')}`}
+                    <Link 
+                      href={service.link || `/#contact?projectType=${service.name.toLowerCase().replace(/ /g, '-')}`}
                       onClick={() => trackServiceCardClick(service.name)}
                       className="inline-flex items-center text-xs font-semibold text-primary-600 hover:text-primary-500 transition-colors duration-200"
                     >
-                      Get Quote for {service.name}
+                      Learn More About {service.name}
                       <svg className="ml-1 h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -133,7 +138,7 @@ export default function Services() {
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-600 to-blue-600 p-6 shadow-xl">
             <div className="absolute inset-0 opacity-20">
               <Image
-                src="/images/misc/section01-rz.jpg"
+                src="/images/misc/section01-rz-1.jpg"
                 alt="Manufacturing Background"
                 fill
                 className="object-cover"
@@ -141,17 +146,17 @@ export default function Services() {
             </div>
             <div className="relative">
               <h3 className="text-xl font-bold text-white mb-3">
-                Custom Solutions Available
+                Custom Product Development
               </h3>
               <p className="text-blue-100 mb-4 leading-relaxed">
-                Don't see exactly what you're looking for? We provide custom garment sourcing 
-                solutions tailored to your specific requirements and industry needs.
+                Need specialized features or custom designs? We create tailored 
+                apparel solutions for unique requirements and specialized applications.
               </p>
               <a 
                 href="#contact" 
                 className="inline-flex items-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 transition-colors duration-200 shadow-sm"
               >
-                Discuss Custom Solutions
+                Discuss Custom Products
               </a>
             </div>
           </div>
@@ -161,10 +166,10 @@ export default function Services() {
         <div className="mx-auto mt-10 max-w-7xl">
           <div className="text-center mb-8">
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Our Service Process
+              Our Product Development Process
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From initial consultation to final delivery, we manage every step of your garment sourcing journey
+              From initial consultation to bulk production, we manage every aspect of your apparel manufacturing needs
             </p>
           </div>
 
@@ -173,8 +178,8 @@ export default function Services() {
               <div className="mx-auto h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-primary-600">1</span>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Consultation</h4>
-              <p className="text-gray-600 text-sm">Understanding your requirements and specifications</p>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Requirements Assessment</h4>
+              <p className="text-gray-600 text-sm">Understanding your product needs and specifications</p>
             </div>
 
             <div className="text-center">
@@ -182,23 +187,23 @@ export default function Services() {
                 <span className="text-2xl font-bold text-primary-600">2</span>
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Design & Sampling</h4>
-              <p className="text-gray-600 text-sm">Creating samples and finalizing designs</p>
+              <p className="text-gray-600 text-sm">Creating samples and finalizing designs with testing</p>
             </div>
 
             <div className="text-center">
               <div className="mx-auto h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-primary-600">3</span>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Production</h4>
-              <p className="text-gray-600 text-sm">Manufacturing with quality control oversight</p>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Bulk Manufacturing</h4>
+              <p className="text-gray-600 text-sm">Volume production with rigorous quality control</p>
             </div>
 
             <div className="text-center">
               <div className="mx-auto h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-primary-600">4</span>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Delivery</h4>
-              <p className="text-gray-600 text-sm">Timely shipping and logistics management</p>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Delivery & Support</h4>
+              <p className="text-gray-600 text-sm">Timely delivery and ongoing customer support</p>
             </div>
           </div>
         </div>
