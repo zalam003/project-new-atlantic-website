@@ -8,6 +8,7 @@ import SEOTracker from '../components/SEOTracker'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://newatlantic.biz'),
   title: {
     default: 'New Atlantic Global - Complete Garment Sourcing & Manufacturing Solutions',
     template: '%s | New Atlantic Global'
