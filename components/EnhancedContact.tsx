@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { trackQuoteRequest, trackFormSubmission } from '../lib/gtag'
 
 interface FormData {
   name: string
@@ -111,6 +112,10 @@ export default function EnhancedContact() {
     }
     
     setIsSubmitting(true)
+    
+    // Track form submission and quote request
+    trackFormSubmission('quote_request', formData.projectType)
+    trackQuoteRequest(formData)
     
     // TODO: Implement actual form submission to CRM/email service
     console.log('Enhanced form submitted:', formData)
